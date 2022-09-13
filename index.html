@@ -1,0 +1,1311 @@
+<!DOCTYPE html>
+<html lang="en" class="sr">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turbo Browser | Home</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+        /* font-family: 'Roboto', sans-serif; */
+        @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+        /* font-family: 'Rubik', sans-serif; */
+
+        *{
+            padding: 0;
+            margin: 0;
+            -webkit-tap-highlight-color: rgba(0,0,0,0);
+            box-sizing: border-box;
+        }
+
+        body{
+            padding: 0;
+            margin: 0;
+            background: #f5f5f5;
+        }
+
+        ::-moz-selection {
+            background: rgb(2 201 240 / 20%);
+        }
+        
+        ::selection {
+            background: rgb(2 201 240 / 10%);
+        }
+
+        @font-face {
+            font-family: HelveticaNormal;
+            src: url("https://res.cloudinary.com/dp1xkuswt/raw/upload/v1597987314/Helvetica_uld9sz.ttf");
+        }
+
+        a{
+            text-decoration: none;
+        }
+
+        a:hover{
+            text-decoration: none;
+        }
+
+        input:focus, textarea:focus, select:focus{
+            outline: none;
+        }
+
+        .flex{
+            display: flex;
+        }
+
+        .hidden{
+            display: none !important;
+        }
+
+        .invisible{
+            opacity: 0 !important;
+        }
+
+        img{
+            object-fit: cover;
+        }
+
+        .superbody-mobile{
+            position: fixed;
+            top: 0;
+            left: 0;
+            overflow: hidden;
+            overflow-y: scroll;
+            height: 100vh;
+            width: 100%;
+            scroll-snap-type: y mandatory;
+        }
+
+        .superbody-mobile::-webkit-scrollbar {
+            display: none;
+        }
+
+        html.sr .load-hidden {
+            visibility: hidden;
+        }
+
+        /* Section 1 */
+
+        .ion-s1__icon_o{
+            height: 32px;
+            fill: #596874;
+            transform: scaleX(-1);
+            margin-bottom: 10px;
+        }
+
+        .section-1{
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background: #fefefe;
+            min-height: 600px;
+            scroll-snap-align: start;
+        }
+
+        .s1-title-1{
+            font-size: 2.4rem;
+            font-family: 'HelveticaNormal';
+            color: #414d59;
+            text-align: center;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .s1-title-2{
+            margin-top: 20px;
+            font-size: 20px;
+            font-family: 'Rubik', sans-serif;
+            color: #414d59;
+            text-align: center;
+            letter-spacing: 1.2px;
+        }
+
+        .s1-title-2-A{
+            letter-spacing: 1px;
+        }
+
+        .s1-t-2-A-S{
+            font-weight: bold;
+        }
+
+        .s1-get-app-btn-1{
+            display: flex;
+            width: 220px;
+            background: #3b4650;
+            align-items: center;
+            justify-content: center;
+            padding-top: 14px;
+            padding-bottom: 14px;
+            border-radius: 4px;
+            margin-top: 32px;
+            /* box-shadow: 0px 2px 10px #cacaca; */
+        }
+
+        .s1-get-app-btn-1-A{
+            color: aliceblue;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+        }
+
+        .s1-get-app-btn-1-B{
+            font-family: 'Rubik', sans-serif;
+            color: #eaeaea;
+            font-size: 15px;
+            width: 146px;
+        }
+
+        .ion-s1-A{
+            height: 20px;
+            fill: #f6f6f6;
+        }
+
+        .s1-get-app-btn-2{
+            display: flex;
+            width: 220px;
+            align-items: center;
+            justify-content: center;
+            padding-top: 14px;
+            padding-bottom: 14px;
+            border-radius: 4px;
+            margin-top: 16px;
+            border: 2px solid #3b4650;
+            height: 48px;
+            background: white;
+            /* box-shadow: 0px 2px 10px #cacaca; */
+        }
+
+        .s1-get-app-btn-2-B{
+            font-family: 'Rubik', sans-serif;
+            color: #3b4650;
+            font-size: 15px;
+            width: 146px;
+            text-align: center;
+        }
+
+        .ion-s1-B{
+            height: 20px;
+            fill: #3b4650;
+        }
+
+        /* Section 2 */
+
+        .section-2{
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            align-items: center;
+            overflow: hidden;
+            background: #a39afe;
+            position: relative;
+            min-height: 600px;
+            scroll-snap-align: start;
+        }
+
+        .s2-title-1{
+            font-size: 22px;
+            font-family: 'Rubik', sans-serif;
+            margin-top: 40px;
+            color: ghostwhite;
+            font-weight: bold;
+        }
+
+        .s2-des-1{
+            font-size: 16px;
+            font-family: 'Rubik', sans-serif;
+            margin-top: 10px;
+            color: ghostwhite;
+            text-align: center;
+            width: 80%;
+        }
+
+        .s2-img-1{
+            width: 80%;
+            border-radius: 30px;
+            overflow: hidden;
+            position: absolute;
+            bottom: -160px;
+            border: 10px solid #b7b0fc;
+            box-shadow: 0px -2px 15px 2px #786de6;
+            background: #a69ef6;
+            max-width: 300px;
+        }
+
+        .s2-src-1{
+            width: 100%;
+            border-radius: 20px;
+        }
+
+        /* Section 3 */
+
+        .section-3{
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            align-items: center;
+            overflow: hidden;
+            background: #ffa497;
+            position: relative;
+            justify-content: flex-end;
+            min-height: 600px;
+            scroll-snap-align: start;
+        }
+
+        .s3-title-1{
+            font-size: 22px;
+            font-family: 'Rubik', sans-serif;
+            margin-bottom: 10px;
+            color: #fffcfb;
+            font-weight: bold;
+        }
+
+        .s3-des-1{
+            font-size: 16px;
+            font-family: 'Rubik', sans-serif;
+            margin-bottom: 40px;
+            color: #fffcfb;
+            text-align: center;
+            width: 80%;
+        }
+
+        .s3-img-1{
+            width: 80%;
+            border-radius: 30px;
+            overflow: hidden;
+            position: absolute;
+            top: -160px;
+            border: 10px solid #ffc3ba;
+            box-shadow: 0px -2px 15px 2px #ec9386;
+            background: #ffc3ba;
+            max-width: 300px;
+        }
+
+        .s3-src-1{
+            width: 100%;
+            border-radius: 20px;
+        }
+
+        /* Section 4 */
+
+        .section-4{
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            align-items: center;
+            overflow: hidden;
+            background: #1e1e23;
+            position: relative;
+            min-height: 600px;
+            scroll-snap-align: start;
+        }
+
+        .s4-title-1{
+            font-size: 22px;
+            font-family: 'Rubik', sans-serif;
+            margin-top: 40px;
+            color: #ececec;
+            font-weight: bold;
+        }
+
+        .s4-des-1{
+            font-size: 16px;
+            font-family: 'Rubik', sans-serif;
+            margin-top: 10px;
+            color: #ececec;
+            text-align: center;
+            width: 80%;
+        }
+
+        .s4-img-1{
+            width: 80%;
+            border-radius: 30px;
+            overflow: hidden;
+            position: absolute;
+            bottom: -160px;
+            border: 10px solid #454a4d;
+            box-shadow: 0px -2px 15px 2px #0f1112;
+            background: #383f43;
+            max-width: 300px;
+        }
+
+        .s4-src-1{
+            width: 100%;
+            border-radius: 20px;
+        }
+
+        /* Section 5 */
+
+        .section-5{
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            align-items: center;
+            overflow: hidden;
+            background: #46e8a1;
+            position: relative;
+            justify-content: flex-end;
+            min-height: 600px;
+            scroll-snap-align: start;
+        }
+
+        .s5-title-1{
+            font-size: 22px;
+            font-family: 'Rubik', sans-serif;
+            margin-bottom: 10px;
+            color: #f9fffc;
+            font-weight: bold;
+        }
+
+        .s5-des-1{
+            font-size: 16px;
+            font-family: 'Rubik', sans-serif;
+            margin-bottom: 40px;
+            color: #f9fffc;
+            text-align: center;
+            width: 80%;
+        }
+
+        .s5-img-1{
+            width: 80%;
+            border-radius: 30px;
+            overflow: hidden;
+            position: absolute;
+            top: -160px;
+            border: 10px solid #91ffcf;
+            box-shadow: 0px -2px 15px 2px #3ccb8d;
+            background: #91ffcf;
+            max-width: 300px;
+        }
+
+        .s5-src-1{
+            width: 100%;
+            border-radius: 20px;
+        }
+
+        /* Section 6 */
+
+        .section-6{
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            overflow: hidden;
+            background: #24292e;
+            position: relative;
+            align-items: center;
+            justify-content: center;
+            min-height: 600px;
+            scroll-snap-align: start;
+        }
+
+        .s6-1{
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-size: 20px;
+            font-family: 'Rubik', sans-serif;
+            color: #ececec;
+        }
+
+        .s6-2{
+            text-align: center;
+            width: 80%;
+            margin-bottom: 20px;
+            font-family: 'HelveticaNormal';
+            font-size: 14px;
+            color: silver;
+            letter-spacing: 0.6px;
+        }
+
+        .s6-2_btn-1{
+            display: flex;
+            width: 220px;
+            background: #3b4650;
+            align-items: center;
+            justify-content: center;
+            padding-top: 14px;
+            padding-bottom: 14px;
+            border-radius: 4px;
+            margin-top: 32px;
+            box-shadow: 0px 6px 20px 0px #1e2327;
+        }
+
+        .ion-s6-A{
+            height: 22px;
+            fill: #f6f6f6;
+        }
+
+        .s6-2_btn-1-B{
+            font-family: 'Rubik', sans-serif;
+            color: #eaeaea;
+            font-size: 15px;
+            text-align: center;
+            width: 146px;
+        }
+
+        .s6-1-source-img-1-IN{
+            width: 240px;
+        }
+
+        /* Section 7 & 8 */
+
+        .section-7{
+            display: flex;
+            flex-direction: row;
+            height: 30vh;
+            overflow: hidden;
+            background: #323940;
+            position: relative;
+            align-items: center;
+            justify-content: center;
+            min-height: 160px;
+            scroll-snap-align: start;
+        }
+
+        .s7-1-A{
+            font-size: 50px;
+            font-family: 'HelveticaNormal';
+            margin-left: 20px;
+            font-weight: bold;
+            color: #e8e8e8;
+        }
+
+        .s7-1-B{
+            font-size: 20px;
+            font-family: 'HelveticaNormal';
+            margin-left: 20px;
+            color: #e8e8e8;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            padding-left: 10px;
+        }
+
+        .s7-2{
+            margin-left: 20px;
+            margin-right: 20px;
+            font-size: 15px;
+            font-family: 'Rubik', sans-serif;
+            color: #a9abad;
+        }
+
+        .section-8{
+            display: flex;
+            flex-direction: column;
+            height: 70vh;
+            overflow: hidden;
+            background: #f5f5f5;
+            position: relative;
+            align-items: flex-start;
+            justify-content: center;
+            min-height: 480px;
+            scroll-snap-align: start;
+        }
+
+        .s8-1{
+            font-size: 16px;
+            font-family: 'HelveticaNormal';
+            margin-left: 18px;
+            color: #323940;
+            text-align: left;
+            text-transform: uppercase;
+            padding-left: 10px;
+            font-weight: bold;
+        }
+
+        .s8-2-btn-A{
+            display: flex;
+            width: 220px;
+            background: #3b4650;
+            align-items: center;
+            justify-content: center;
+            padding-top: 14px;
+            padding-bottom: 14px;
+            border-radius: 4px;
+            margin-top: 32px;
+            margin-left: 20px;
+            max-height: 45px;
+        }
+
+        .ion-s8-A{
+            height: 20px;
+            fill: #f6f6f6;
+        }
+
+        .s8-1-btn-1-B{
+            font-family: 'Rubik', sans-serif;
+            color: #eaeaea;
+            font-size: 15px;
+            width: 146px;
+            text-align: center;
+        }
+
+        .s8-1-btn-1-B--2{
+            font-family: 'Rubik', sans-serif;
+            color: #3b4650;
+            font-size: 15px;
+            width: 146px;
+            text-align: center;
+        }
+
+        .ion-s8-A--2{
+            height: 20px;
+            color: #3b4650;
+        }
+
+        .s8-T-1{
+            font-size: 16px;
+            font-family: 'Rubik', sans-serif;
+            margin-left: 18px;
+            color: #323940;
+            text-align: left;
+            padding-left: 10px;
+            margin-top: 10px;
+            margin-right: 10px;
+        }
+
+        .s8-T-1--2{
+            font-size: 16px;
+            font-family: 'Rubik', sans-serif;
+            margin-left: 18px;
+            color: #323940;
+            text-align: left;
+            padding-left: 10px;
+            margin-top: 10px;
+            margin-right: 10px;
+            display: none;
+        }
+
+        .s8-2-btn-B{
+            display: flex;
+            width: 220px;
+            background: #ffffff;
+            align-items: center;
+            justify-content: center;
+            padding-top: 14px;
+            padding-bottom: 14px;
+            border-radius: 4px;
+            margin-top: 8px;
+            margin-left: 20px;
+            max-height: 45px;
+            border: 2px solid #3b4650;
+        }
+
+        .s8-T-2{
+            font-size: 16px;
+            font-family: 'HelveticaNormal';
+            margin-left: 18px;
+            color: #323940;
+            text-align: center;
+            text-transform: uppercase;
+            padding-left: 10px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .s8-T-3{
+            flex-direction: column;
+            margin-left: 20px;
+            margin-top: 10px;
+            font-family: 'Rubik', sans-serif;
+        }
+
+        .s8-T-3-A{
+            margin-bottom: 4px;
+            display: flex;
+            flex-direction: row;
+            transition: 0.1s;
+        }
+
+        .s8-T-3-A-TOUCH{
+            filter: opacity(0.4);
+        }
+
+        .s8-T-3-A a{
+            color: #444d55;
+            padding-left: 10px;
+        }
+
+        .s8-T-3-A svg{
+            height: 18px;
+            fill: #323940;
+            margin-left: 10px;
+        }
+
+        .s8-T-PV1{
+            font-size: 14px;
+            font-family: 'HelveticaNormal';
+            margin-left: 18px;
+            color: #323940;
+            text-align: center;
+            text-transform: uppercase;
+            padding-left: 10px;
+            font-weight: bold;
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .s8-T-PV2{
+            font-size: 14px;
+            font-family: 'HelveticaNormal';
+            margin-left: 18px;
+            color: #323940;
+            text-align: center;
+            text-transform: uppercase;
+            padding-left: 10px;
+            font-weight: bold;
+            margin-top: 6px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .s8TPv2CC{
+            height: 4px;
+            width: 4px;
+            background: #7f8d9d;
+            border-radius: 1px;
+        }
+    </style>
+    <style>
+        /* For tablets */
+        
+        @media only screen and (min-width: 600px) {
+
+        .s1-title-1 {
+            font-size: 3rem;
+        }
+
+        .s1-title-2{
+            font-size: 20px;
+            letter-spacing: 1px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+
+        .s1-get-app-btn-1{
+            width: 280px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .s1-get-app-btn-1-B {
+            font-size: 16px;
+            width: 200px;
+            text-align: center;
+        }
+
+        .s1-get-app-btn-2 {
+            width: 280px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .s1-get-app-btn-2-B {
+            font-size: 16px;
+            width: 200px;
+            text-align: center;
+        }
+
+        /* Sections */
+
+        .section-2 {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            justify-content: center;
+        }
+
+        .s2-title-1 {
+            font-size: 26px;
+            margin-top: 40px;
+            margin-bottom: 10px;
+        }
+
+        .s2-des-1 {
+            font-size: 20px;
+            margin-top: 10px;
+            margin-bottom: 40px;
+            max-width: 400px;
+        }
+
+        .s2-img-1 {
+            position: relative;
+            bottom: auto;
+            margin-top: 20px;
+        }
+
+        /* Section 3 */
+
+        .section-3 {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            justify-content: center;
+            height: fit-content;
+            padding-bottom: 40px;
+        }
+
+        .s3-title-1 {
+            font-size: 26px;
+            margin-top: 0px;
+            margin-bottom: 10px;
+        }
+
+        .s3-des-1 {
+            font-size: 20px;
+            margin-top: 10px;
+            margin-bottom: 40px;
+            max-width: 400px;
+        }
+
+        .s3-img-1 {
+            position: relative;
+            bottom: auto;
+            margin-top: 20px;
+        }
+
+        /* Section 4 */
+
+        .section-4 {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            justify-content: center;
+        }
+
+        .s4-title-1 {
+            font-size: 26px;
+            margin-top: 40px;
+            margin-bottom: 10px;
+        }
+
+        .s4-des-1 {
+            font-size: 20px;
+            margin-top: 10px;
+            margin-bottom: 40px;
+            max-width: 400px;
+        }
+
+        .s4-img-1 {
+            position: relative;
+            bottom: auto;
+            margin-top: 20px;
+        }
+
+        /* Section 5 */
+
+        .section-5 {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            justify-content: center;
+            height: fit-content;
+            padding-bottom: 40px;
+        }
+
+        .s5-title-1 {
+            font-size: 26px;
+            margin-top: 0px;
+            margin-bottom: 10px;
+        }
+
+        .s5-des-1 {
+            font-size: 20px;
+            margin-top: 10px;
+            margin-bottom: 40px;
+            max-width: 400px;
+        }
+
+        .s5-img-1 {
+            position: relative;
+            bottom: auto;
+            margin-top: 20px;
+        }
+
+        /* Section 6 */
+
+        .section-6 {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            justify-content: center;
+        }
+
+        .s6-title-1 {
+            font-size: 26px;
+            margin-top: 40px;
+            margin-bottom: 10px;
+        }
+
+        .s6-des-1 {
+            font-size: 20px;
+            margin-top: 10px;
+            margin-bottom: 40px;
+            max-width: 400px;
+        }
+
+        .s6-img-1 {
+            position: relative;
+            bottom: auto;
+            margin-top: 20px;
+        }
+
+        /* -- */
+
+        .section-6 {
+            min-height: 600px;
+            max-height: 800px;
+        }
+
+        .s6-1-source-img-1-IN {
+            width: 280px;
+        }
+
+        .s6-2{
+            width: 60%;
+            font-size: 15px;
+        }
+
+        .s6-2_btn-1-A{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .s6-2_btn-1-B{
+            font-size: 16px;
+            width: 146px;
+        }
+
+        .section-7{
+            max-height: 200px;
+
+        }
+
+        .s7-2{
+            width: 200px;
+        }
+
+        .section-8{
+            max-height: 200px;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            padding-right: 40px;
+        }
+
+        .s8-T-1{
+            max-width: 400px;
+        }
+
+        .s8-T-1--2{
+            max-width: 400px;
+            display: block;
+        }
+
+        }
+
+        /* For desktop */
+        @media only screen and (min-width: 770px) {
+
+        .section-8{
+            justify-content: space-around;
+        }
+
+        .s6-2{
+            width: 40%;
+        }
+
+        .superbody-mobile::-webkit-scrollbar {
+            display: block;
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+            border-radius: 2px;
+            background: #f7f7f7;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #42505c;
+            border-radius: 2px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #364048;
+        }
+
+        }
+    </style>
+
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+
+</head>
+<body>
+
+    <div id="superbodyMobile" class="superbody-mobile">
+
+        <section class="section-1">
+            <div class="s1-icon__1 load-hidden">
+                <svg class="ionicon ion-s1__icon_o" viewBox="0 0 512 512"><title>Planet</title>
+                    <path d="M413.48 284.46c58.87 47.24 91.61 89 80.31 108.55-17.85 30.85-138.78-5.48-270.1-81.15S.37 149.84 18.21 119c11.16-19.28 62.58-12.32 131.64 14.09" stroke-miterlimit="10" class="ionicon-fill-none ionicon-stroke-width"></path><circle cx="256" cy="256" r="160" stroke-miterlimit="10" class="ionicon-fill-none ionicon-stroke-width"></circle></svg>
+            </div>
+            <div class="s1-title-1 load-hidden">
+                <div class="s1-title-1-A">
+                    Turbo
+                </div>
+                <div class="s1-title-1-B load-hidden">
+                    Browser
+                </div>
+            </div>
+            <div class="s1-title-2 load-hidden">
+                <span class="s1-title-2-A">
+                    <span class="s1-t-2-A-S">Simple</span> and <span class="s1-t-2-A-S">Secure</span>
+                </span><br>mobile browser
+            </div>
+            <a href="https://play.google.com/store/apps/details?id=com.turbo_infinitus" class="s1-get-app-btn-1 ripple load-hidden" target="_blank" ripple-press-expand-time="0.2" ripple-release-expand-time="0.2" ripple-color="#262e34">
+                <div class="s1-get-app-btn-1-A">
+                    <svg id="logo-google-playstore" class="ionicon ion-s1-A" viewBox="0 0 512 512">
+                    <title>Logo Google Playstore</title>
+                    <path d="M48 59.49v393a4.33 4.33 0 007.37 3.07L260 256 55.37 56.42A4.33 4.33 0 0048 59.49zM345.8 174L89.22 32.64l-.16-.09c-4.42-2.4-8.62 3.58-5 7.06l201.13 192.32zM84.08 472.39c-3.64 3.48.56 9.46 5 7.06l.16-.09L345.8 338l-60.61-57.95zM449.38 231l-71.65-39.46L310.36 256l67.37 64.43L449.38 281c19.49-10.77 19.49-39.23 0-50z"></path></svg>
+                </div>
+                <div class="s1-get-app-btn-1-B">
+                    Get it on Google Play
+                </div>
+            </a>
+            <a href="https://github.com/codeninja02/Turbo-Browser" class="s1-get-app-btn-2 ripple load-hidden" target="_blank" ripple-press-expand-time="0.2" ripple-release-expand-time="0.2" ripple-color="#e7e7e7">
+                <div class="s1-get-app-btn-1-A">
+                    <svg id="logo-google-playstore" class="ionicon ion-s1-B" viewBox="0 0 512 512">
+                    <title>Logo Google Playstore</title>
+                    <path d="M256 32C132.3 32 32 134.9 32 261.7c0 101.5 64.2 187.5 153.2 217.9a17.56 17.56 0 003.8.4c8.3 0 11.5-6.1 11.5-11.4 0-5.5-.2-19.9-.3-39.1a102.4 102.4 0 01-22.6 2.7c-43.1 0-52.9-33.5-52.9-33.5-10.2-26.5-24.9-33.6-24.9-33.6-19.5-13.7-.1-14.1 1.4-14.1h.1c22.5 2 34.3 23.8 34.3 23.8 11.2 19.6 26.2 25.1 39.6 25.1a63 63 0 0025.6-6c2-14.8 7.8-24.9 14.2-30.7-49.7-5.8-102-25.5-102-113.5 0-25.1 8.7-45.6 23-61.6-2.3-5.8-10-29.2 2.2-60.8a18.64 18.64 0 015-.5c8.1 0 26.4 3.1 56.6 24.1a208.21 208.21 0 01112.2 0c30.2-21 48.5-24.1 56.6-24.1a18.64 18.64 0 015 .5c12.2 31.6 4.5 55 2.2 60.8 14.3 16.1 23 36.6 23 61.6 0 88.2-52.4 107.6-102.3 113.3 8 7.1 15.2 21.1 15.2 42.5 0 30.7-.3 55.5-.3 63 0 5.4 3.1 11.5 11.4 11.5a19.35 19.35 0 004-.4C415.9 449.2 480 363.1 480 261.7 480 134.9 379.7 32 256 32z"></path></svg>
+                </div>
+                <div class="s1-get-app-btn-2-B">
+                    Source Code
+                </div>
+            </a>
+        </section>
+
+        <section class="section-2">
+            <div class="s2-title-1">
+                Simple & Clean UI
+            </div>
+            <div class="s2-des-1">
+                Turbo Browser provides a simple interface for browsing
+            </div>
+            <div class="s2-img-1">
+                <img src="https://turbo-browser.netlify.app/assets/scr1.jpg" alt="Turbo Browser UI" class="s2-src-1">
+            </div>
+        </section>
+
+        <section class="section-3">
+            <div class="s3-img-1">
+                <img src="https://turbo-browser.netlify.app/assets/scr2.jpg" alt="Turbo Browser Features" class="s3-src-1">
+            </div>
+            <div class="s3-title-1">
+                Fast, Private and Safe
+            </div>
+            <div class="s3-des-1">
+                Browse the internet faster with optimized video loading and without buffering
+            </div>
+        </section>
+
+        <section class="section-4">
+            <div class="s4-title-1">
+                Private mode
+            </div>
+            <div class="s4-des-1">
+                Browse more securely and privately in Turbo Browser with the incognito mode
+            </div>
+            <div class="s4-img-1">
+                <img src="https://turbo-browser.netlify.app/assets/scr3.jpg" alt="Turbo Browser Private Mode" class="s4-src-1">
+            </div>
+        </section>
+
+        <section class="section-5">
+            <div class="s5-img-1">
+                <img src="https://turbo-browser.netlify.app/assets/scr4.jpg" alt="Turbo Browser Settings" class="s5-src-1">
+            </div>
+            <div class="s5-title-1">
+                Settings
+            </div>
+            <div class="s5-des-1">
+                Personalize your browsing experience in Turbo Browser easily
+            </div>
+        </section>
+
+        <section class="section-6">
+            <div class="s6-1-source-img-1">
+                <img class="s6-1-source-img-1-IN" alt="Turbo Browser open source" src="https://turbo-browser.netlify.app/assets/openSource.svg">
+            </div>
+            <div class="s6-1">
+                Now open source!
+            </div>
+            <div class="s6-2">
+                Turbo Browser, built on React Native is now completely open source so if you have any idea for this poject, feel free to make a pull request and make a contribution to this project.
+            </div>
+            <a href="https://github.com/codeninja02/Turbo-Browser" class="s6-2_btn-1 ripple" target="_blank" ripple-press-expand-time="0.2" ripple-release-expand-time="0.2" ripple-color="#262e34">
+                <div class="s6-2_btn-1-A">
+                    <svg id="logo-google-playstore" class="ionicon ion-s6-A" viewBox="0 0 512 512">
+                        <path d="M256 32C132.3 32 32 134.9 32 261.7c0 101.5 64.2 187.5 153.2 217.9a17.56 17.56 0 003.8.4c8.3 0 11.5-6.1 11.5-11.4 0-5.5-.2-19.9-.3-39.1a102.4 102.4 0 01-22.6 2.7c-43.1 0-52.9-33.5-52.9-33.5-10.2-26.5-24.9-33.6-24.9-33.6-19.5-13.7-.1-14.1 1.4-14.1h.1c22.5 2 34.3 23.8 34.3 23.8 11.2 19.6 26.2 25.1 39.6 25.1a63 63 0 0025.6-6c2-14.8 7.8-24.9 14.2-30.7-49.7-5.8-102-25.5-102-113.5 0-25.1 8.7-45.6 23-61.6-2.3-5.8-10-29.2 2.2-60.8a18.64 18.64 0 015-.5c8.1 0 26.4 3.1 56.6 24.1a208.21 208.21 0 01112.2 0c30.2-21 48.5-24.1 56.6-24.1a18.64 18.64 0 015 .5c12.2 31.6 4.5 55 2.2 60.8 14.3 16.1 23 36.6 23 61.6 0 88.2-52.4 107.6-102.3 113.3 8 7.1 15.2 21.1 15.2 42.5 0 30.7-.3 55.5-.3 63 0 5.4 3.1 11.5 11.4 11.5a19.35 19.35 0 004-.4C415.9 449.2 480 363.1 480 261.7 480 134.9 379.7 32 256 32z"></path></svg>
+                </div>
+                <div class="s6-2_btn-1-B">
+                    Source Code
+                </div>
+            </a>
+        </section>
+
+        <section class="section-7">
+            <div class="s7-1">
+                <div class="s7-1-A">
+                    100K
+                </div>
+                <div class="s7-1-B">
+                    Installs
+                </div>
+            </div>
+            <div class="s7-2">
+                Trusted and used by more than 100,000 users.
+            </div>
+        </section>
+
+        <section class="section-8">
+            <div style="
+                display: flex;
+                flex-direction: column;
+                align-items: baseline;
+                margin-right: 60px;
+            ">
+                <div class="s8-1">
+                    About Turbo Browser
+                </div>
+                <div class="s8-T-1">
+                    Turbo Browser is an Internet browsing app created and maintained by CodeNinja.
+                </div>
+                <div class="s8-T-1--2">
+                    For any queries or suggestions, feel free to drop an email at <a href="mailto:contact.turbomedia@gmail.com" style="
+                        color: #323940;
+                        border-bottom: 1px solid #323940;    
+                    ">contact.turbomedia@gmail.com</a>
+                </div>
+                <div class="s8-T-2">
+                    Social Links
+                </div>
+                <div class="s8-T-3">
+                    <div class="s8-T-3-A">
+                        <svg id="logo-github" class="ionicon" viewBox="0 0 512 512"><title>Logo Github</title>
+                        <path d="M256 32C132.3 32 32 134.9 32 261.7c0 101.5 64.2 187.5 153.2 217.9a17.56 17.56 0 003.8.4c8.3 0 11.5-6.1 11.5-11.4 0-5.5-.2-19.9-.3-39.1a102.4 102.4 0 01-22.6 2.7c-43.1 0-52.9-33.5-52.9-33.5-10.2-26.5-24.9-33.6-24.9-33.6-19.5-13.7-.1-14.1 1.4-14.1h.1c22.5 2 34.3 23.8 34.3 23.8 11.2 19.6 26.2 25.1 39.6 25.1a63 63 0 0025.6-6c2-14.8 7.8-24.9 14.2-30.7-49.7-5.8-102-25.5-102-113.5 0-25.1 8.7-45.6 23-61.6-2.3-5.8-10-29.2 2.2-60.8a18.64 18.64 0 015-.5c8.1 0 26.4 3.1 56.6 24.1a208.21 208.21 0 01112.2 0c30.2-21 48.5-24.1 56.6-24.1a18.64 18.64 0 015 .5c12.2 31.6 4.5 55 2.2 60.8 14.3 16.1 23 36.6 23 61.6 0 88.2-52.4 107.6-102.3 113.3 8 7.1 15.2 21.1 15.2 42.5 0 30.7-.3 55.5-.3 63 0 5.4 3.1 11.5 11.4 11.5a19.35 19.35 0 004-.4C415.9 449.2 480 363.1 480 261.7 480 134.9 379.7 32 256 32z"></path></svg>
+                        <a href="https://github.com/codeninja02" target="_blank">
+                            Github
+                        </a>
+                    </div>
+                    <div class="s8-T-3-A">
+                        <svg id="logo-github" class="ionicon" viewBox="0 0 512 512"><title>Logo Github</title>
+                        <path d="M349.33 69.33a93.62 93.62 0 0193.34 93.34v186.66a93.62 93.62 0 01-93.34 93.34H162.67a93.62 93.62 0 01-93.34-93.34V162.67a93.62 93.62 0 0193.34-93.34h186.66m0-37.33H162.67C90.8 32 32 90.8 32 162.67v186.66C32 421.2 90.8 480 162.67 480h186.66C421.2 480 480 421.2 480 349.33V162.67C480 90.8 421.2 32 349.33 32z"></path><path d="M377.33 162.67a28 28 0 1128-28 27.94 27.94 0 01-28 28zM256 181.33A74.67 74.67 0 11181.33 256 74.75 74.75 0 01256 181.33m0-37.33a112 112 0 10112 112 112 112 0 00-112-112z"></path></svg>
+                        <a href="https://www.instagram.com/codeninja02" target="_blank">
+                            Instagram
+                        </a>
+                    </div>
+                    <div class="s8-T-3-A">
+                        <svg id="logo-github" class="ionicon" viewBox="0 0 512 512"><title>Logo Github</title>
+                        <path d="M496 109.5a201.8 201.8 0 01-56.55 15.3 97.51 97.51 0 0043.33-53.6 197.74 197.74 0 01-62.56 23.5A99.14 99.14 0 00348.31 64c-54.42 0-98.46 43.4-98.46 96.9a93.21 93.21 0 002.54 22.1 280.7 280.7 0 01-203-101.3A95.69 95.69 0 0036 130.4c0 33.6 17.53 63.3 44 80.7A97.5 97.5 0 0135.22 199v1.2c0 47 34 86.1 79 95a100.76 100.76 0 01-25.94 3.4 94.38 94.38 0 01-18.51-1.8c12.51 38.5 48.92 66.5 92.05 67.3A199.59 199.59 0 0139.5 405.6a203 203 0 01-23.5-1.4A278.68 278.68 0 00166.74 448c181.36 0 280.44-147.7 280.44-275.8 0-4.2-.11-8.4-.31-12.5A198.48 198.48 0 00496 109.5z"></path></svg>
+                        <a href="https://twitter.com/codeninja02" target="_blank">
+                            Twitter
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="s8-2">
+                    <a href="https://play.google.com/store/apps/details?id=com.turbo_infinitus" class="s8-2-btn-A ripple" ripple-press-expand-time="0.2" ripple-release-expand-time="0.2" ripple-color="#262e34" target="_blank">
+                        <div class="s8-2_btn-1-A">
+                            <svg id="logo-google-playstore" class="ionicon ion-s8-A" viewBox="0 0 512 512">
+                                <title>Logo Google Playstore</title>
+                                <path d="M48 59.49v393a4.33 4.33 0 007.37 3.07L260 256 55.37 56.42A4.33 4.33 0 0048 59.49zM345.8 174L89.22 32.64l-.16-.09c-4.42-2.4-8.62 3.58-5 7.06l201.13 192.32zM84.08 472.39c-3.64 3.48.56 9.46 5 7.06l.16-.09L345.8 338l-60.61-57.95zM449.38 231l-71.65-39.46L310.36 256l67.37 64.43L449.38 281c19.49-10.77 19.49-39.23 0-50z"></path></svg>
+                        </div>
+                        <div class="s8-1-btn-1-B">
+                            Google Play
+                        </div>
+                    </a>
+                </div>
+                <div class="s8-3">
+                    <a href="https://github.com/codeninja02/Turbo-Browser" class="s8-2-btn-B ripple" target="_blank" ripple-press-expand-time="0.2" ripple-release-expand-time="0.2" ripple-color="#e7e7e7">
+                        <div class="s8-2_btn-1-A">
+                            <svg id="logo-google-playstore" class="ionicon ion-s8-A--2" viewBox="0 0 512 512">
+                            <title>Logo Google Playstore</title>
+                            <path d="M256 32C132.3 32 32 134.9 32 261.7c0 101.5 64.2 187.5 153.2 217.9a17.56 17.56 0 003.8.4c8.3 0 11.5-6.1 11.5-11.4 0-5.5-.2-19.9-.3-39.1a102.4 102.4 0 01-22.6 2.7c-43.1 0-52.9-33.5-52.9-33.5-10.2-26.5-24.9-33.6-24.9-33.6-19.5-13.7-.1-14.1 1.4-14.1h.1c22.5 2 34.3 23.8 34.3 23.8 11.2 19.6 26.2 25.1 39.6 25.1a63 63 0 0025.6-6c2-14.8 7.8-24.9 14.2-30.7-49.7-5.8-102-25.5-102-113.5 0-25.1 8.7-45.6 23-61.6-2.3-5.8-10-29.2 2.2-60.8a18.64 18.64 0 015-.5c8.1 0 26.4 3.1 56.6 24.1a208.21 208.21 0 01112.2 0c30.2-21 48.5-24.1 56.6-24.1a18.64 18.64 0 015 .5c12.2 31.6 4.5 55 2.2 60.8 14.3 16.1 23 36.6 23 61.6 0 88.2-52.4 107.6-102.3 113.3 8 7.1 15.2 21.1 15.2 42.5 0 30.7-.3 55.5-.3 63 0 5.4 3.1 11.5 11.4 11.5a19.35 19.35 0 004-.4C415.9 449.2 480 363.1 480 261.7 480 134.9 379.7 32 256 32z"></path></svg>
+                        </div>
+                        <div class="s8-1-btn-1-B--2">
+                            Source Code
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script>
+        var ripple=function(){function rippleStart(e){rippleContainer=getRippleContainer(e.target),("0"==rippleContainer.getAttribute("animating")||!rippleContainer.hasAttribute("animating"))&&e.target.className.indexOf("ripple")>-1&&(rippleContainer.setAttribute("animating","1"),offsetX="number"==typeof e.offsetX?e.offsetX:e.touches[0].clientX-e.target.getBoundingClientRect().left,offsetY="number"==typeof e.offsetY?e.offsetY:e.touches[0].clientY-e.target.getBoundingClientRect().top,fullCoverRadius=Math.max(Math.sqrt(Math.pow(offsetX,2)+Math.pow(offsetY,2)),Math.sqrt(Math.pow(e.target.clientWidth-offsetX,2)+Math.pow(e.target.clientHeight-offsetY,2)),Math.sqrt(Math.pow(offsetX,2)+Math.pow(e.target.clientHeight-offsetY,2)),Math.sqrt(Math.pow(offsetY,2)+Math.pow(e.target.clientWidth-offsetX,2))),expandTime=e.target.getAttribute("ripple-press-expand-time")||3,rippleContainer.style.transition="transform "+expandTime+"s ease-out, box-shadow 0.1s linear",rippleContainer.style.background=e.target.getAttribute("ripple-color")||"white",rippleContainer.style.opacity=e.target.getAttribute("ripple-opacity")||"0.6",rippleContainer.style.boxShadow=e.target.getAttribute("ripple-shadow")||"none",rippleContainer.style.top=offsetY+"px",rippleContainer.style.left=offsetX+"px",rippleContainer.style.transform="translate(-50%, -50%) scale("+fullCoverRadius/100+")")}function rippleEnd(e){rippleContainer=getRippleContainer(e.target),"1"==rippleContainer.getAttribute("animating")&&(rippleContainer.setAttribute("animating","2"),backgroundA=window.getComputedStyle(rippleContainer,null).getPropertyValue("background"),destinationRadius=e.target.clientWidth+e.target.clientHeight,rippleContainer.style.transition="none",expandTime=e.target.getAttribute("ripple-release-expand-time")||.4,rippleContainer.style.transition="transform "+expandTime+"s linear, backgroundA "+expandTime+"s linear, opacity "+expandTime+"s ease-in-out",rippleContainer.style.transform="translate(-50%, -50%) scale("+destinationRadius/100+")",rippleContainer.style.background="radial-gradient(transparent 10%, "+backgroundA+" 40%)",rippleContainer.style.opacity="0",e.target.dispatchEvent(new CustomEvent("ripple-button-click",{target:e.target})),eval(e.target.getAttribute("onrippleclick")))}function rippleRetrieve(e){rippleContainer=getRippleContainer(e.target),"translate(-50%, -50%) scale(0)"==rippleContainer.style.transform&&rippleContainer.setAttribute("animating","0"),"1"==rippleContainer.getAttribute("animating")&&(rippleContainer.setAttribute("animating","3"),collapseTime=e.target.getAttribute("ripple-leave-collapse-time")||.4,rippleContainer.style.transition="transform "+collapseTime+"s linear, box-shadow "+collapseTime+"s linear",rippleContainer.style.boxShadow="none",rippleContainer.style.transform="translate(-50%, -50%) scale(0)")}function getRippleContainer(e){for(childs=e.childNodes,ii=0;ii<childs.length;ii++)try{if(childs[ii].className.indexOf("rippleContainer")>-1)return childs[ii]}catch(t){}return e}window.addEventListener("load",function(){css=document.createElement("style"),css.type="text/css",css.innerHTML=".ripple { overflow: hidden !important; position: relative; } .ripple .rippleContainer { display: block; height: 200px !important; width: 200px !important; padding: 0px 0px 0px 0px; border-radius: 50%; position: absolute !important; top: 0px; left: 0px; transform: translate(-50%, -50%) scale(0); -webkit-transform: translate(-50%, -50%) scale(0); -ms-transform: translate(-50%, -50%) scale(0); background-color: transparent; }  .ripple * {pointer-events: none !important;}",document.head.appendChild(css),ripple.registerRipples()});var ripple={registerRipples:function(){for(rippleButtons=document.getElementsByClassName("ripple"),i=0;i<rippleButtons.length;i++)rippleButtons[i].addEventListener("touchstart",function(e){rippleStart(e)},{passive:!0}),rippleButtons[i].addEventListener("touchmove",function(e){if(e.target.hasAttribute("ripple-cancel-on-move"))return void rippleRetrieve(e);try{overEl=document.elementFromPoint(e.touches[0].clientX,e.touches[0].clientY).className.indexOf("ripple")>=0}catch(t){overEl=!1}overEl||rippleRetrieve(e)},{passive:!0}),rippleButtons[i].addEventListener("touchend",function(e){rippleEnd(e)},{passive:!0}),rippleButtons[i].addEventListener("mousedown",function(e){rippleStart(e)},{passive:!0}),rippleButtons[i].addEventListener("mouseup",function(e){rippleEnd(e)},{passive:!0}),rippleButtons[i].addEventListener("mousemove",function(e){!e.target.hasAttribute("ripple-cancel-on-move")||0==e.movementX&&0==e.movementY||rippleRetrieve(e)},{passive:!0}),rippleButtons[i].addEventListener("mouseleave",function(e){rippleRetrieve(e)},{passive:!0}),rippleButtons[i].addEventListener("transitionend",function(e){("2"==e.target.getAttribute("animating")||"3"==e.target.getAttribute("animating"))&&(e.target.style.transition="none",e.target.style.transform="translate(-50%, -50%) scale(0)",e.target.style.boxShadow="none",e.target.setAttribute("animating","0"))},{passive:!0}),getRippleContainer(rippleButtons[i])==rippleButtons[i]&&(rippleButtons[i].innerHTML+='<div class="rippleContainer"></div>')},ripple:function(t){t.className.indexOf("ripple")<0||(rect=t.getBoundingClientRect(),e={target:t,offsetX:rect.width/2,offsetY:rect.height/2},rippleStart(e),rippleEnd(e))}};return ripple}();
+    </script>
+    <script>
+        ScrollReveal({
+            container: document.getElementById("superbodyMobile"),
+        });
+
+        // Section 1
+
+        ScrollReveal().reveal(".s1-icon__1", {
+            delay: 0,
+            duration: 1000,
+            distance: '20%',
+            origin: 'bottom',
+            opacity: 0,
+            viewOffset: {
+                top: 0,
+                right: 0,
+                bottom: 0,
+                left: 0,
+            },
+        });
+
+        ScrollReveal().reveal(".s1-title-1-A", {
+            delay: 200,
+            duration: 1000,
+            distance: '20%',
+            origin: 'bottom',
+            opacity: 0,
+            viewOffset: {
+                top: 0,
+                right: 0,
+                bottom: 0,
+                left: 0,
+            },
+        });
+
+        ScrollReveal().reveal(".s1-title-1-B", {
+            delay: 400,
+            duration: 1000,
+            distance: '20%',
+            origin: 'bottom',
+            opacity: 0,
+            viewOffset: {
+                top: 0,
+                right: 0,
+                bottom: 0,
+                left: 0,
+            },
+        });
+
+        ScrollReveal().reveal(".s1-title-2", {
+            delay: 600,
+            duration: 1000,
+            distance: '20%',
+            origin: 'bottom',
+            opacity: 0,
+            viewOffset: {
+                top: 0,
+                right: 0,
+                bottom: 0,
+                left: 0,
+            },
+        });
+
+        ScrollReveal().reveal(".s1-get-app-btn-1", {
+            delay: 800,
+            duration: 1000,
+            distance: '20%',
+            origin: 'bottom',
+            opacity: 0,
+            viewOffset: {
+                top: 0,
+                right: 0,
+                bottom: 0,
+                left: 0,
+            },
+        });
+
+        ScrollReveal().reveal(".s1-get-app-btn-2", {
+            delay: 1000,
+            duration: 1000,
+            distance: '20%',
+            origin: 'bottom',
+            opacity: 0,
+            viewOffset: {
+                top: 0,
+                right: 0,
+                bottom: 0,
+                left: 0,
+            },
+        });
+
+        // Section 6
+
+        ScrollReveal().reveal(".s6-1-source-img-1", {
+            delay: 200,
+            duration: 1000,
+        });
+
+        ScrollReveal().reveal(".s6-1", {
+            delay: 400,
+            duration: 1000,
+        });
+
+        ScrollReveal().reveal(".s6-2", {
+            delay: 600,
+            duration: 1000,
+            distance: '5%',
+            origin: 'top',
+            opacity: 0,
+            viewOffset: {
+                top: 0,
+                right: 0,
+                bottom: 0,
+                left: 0,
+            },
+        });
+
+        ScrollReveal().reveal(".s6-2_btn-1", {
+            delay: 800,
+            duration: 1000,
+            distance: '5%',
+            origin: 'top',
+            opacity: 0,
+            viewOffset: {
+                top: 0,
+                right: 0,
+                bottom: 0,
+                left: 0,
+            },
+        });
+
+        // Section 7 & 8
+
+        ScrollReveal().reveal(".s7-1", {
+            delay: 200,
+            duration: 1000,
+            distance: '1%',
+            opacity: 0,
+            origin: 'bottom',
+        });
+
+        ScrollReveal().reveal(".section-8", {
+            delay: 200,
+            duration: 1200,
+            opacity: 0,
+        });
+    </script>
+
+</body>
+</html>
